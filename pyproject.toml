@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "loan_amort"
+version = "0.1.0"
+description = "Python toolkit & CLI for loan amortization schedules, metrics, and charts"
+authors = ["Oussama Ennaciri <oussamaennaciri@gmail.com>"]
+packages = [
+  { include = "loan_amort" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^2.0"
+click = "^8.0"
+matplotlib = "^3.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
