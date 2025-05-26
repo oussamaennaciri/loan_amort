@@ -2,18 +2,17 @@ import pytest
 import pandas as pd
 from loan_amort.amort import amortize_loan
 
-EXPECTED_COLUMNS = [
+EXPECTED_COLUMNS = {
     "period",
     "date",
     "beginning_balance",
     "payment",
     "interest",
     "principal",
-    "ending_balance"
-]
+    "ending_balance",
+}
 
-def test_amortize_loan_returns_dataframe_with_correct_columns():
-    # Call the stub function
+def test_amortize_loan_returns_empty_dataframe_with_expected_columns():
     df = amortize_loan(
         principal=1000.0,
         annual_rate=0.05,
@@ -21,13 +20,12 @@ def test_amortize_loan_returns_dataframe_with_correct_columns():
         start_date="2025-06-01"
     )
 
-    # It should be a pandas DataFrame
-    assert isinstance(df, pd.DataFrame), "Expected a pandas DataFrame"
+    # Should be a DataFrame
+    assert isinstance(df, pd.DataFrame)
 
-    # It should have the right columns (order doesn’t matter)
-    assert set(df.columns) == set(EXPECTED_COLUMNS), \
-        f"DataFrame columns {df.columns.tolist()} do not match expected {EXPECTED_COLUMNS}"
+    # Must have exactly the expected columns
+    assert set(df.columns) == EXPECTED_COLUMNS
 
-    # Since the implementation is a stub, it should be empty
-    assert df.shape[0] == 0, "Expected an empty DataFrame for the stub implementation"
+    # Stub returns empty
+    assert df.empty
 
