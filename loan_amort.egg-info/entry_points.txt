@@ -1,0 +1,2 @@
+[console_scripts]
+loan_amort = loan_amort.cli:main

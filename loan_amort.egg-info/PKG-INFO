@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: loan_amort
+Version: 0.1.0
+Requires-Dist: matplotlib
+Requires-Dist: python-dateutil
+Dynamic: requires-dist
