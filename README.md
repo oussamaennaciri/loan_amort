@@ -36,7 +36,7 @@ pip install loan_amort
 
 ```bash
 $ loan_amort amortize \
-    -P 250000 \
+    -P 265000 \
     -r 0.0499 \
     -y 30 \
     -k 12 \
@@ -51,7 +51,7 @@ Produces a table with columns: Period | Date | Payment | Interest | Principal | 
 
 ```bash
 $ loan_amort plot cumulative_line \
-    -P 250000 -r 0.0499 -y 30 -k 12 \
+    -P 265000 -r 0.0499 -y 30 -k 12 \
     --first-date 2025-06-01
 ```
 
@@ -63,7 +63,7 @@ Shows how principal vs interest contributions accumulate over a 30‑year term.
 
 ```bash
 $ loan_amort plot interest_stacked \
-    -P 250000 -r 0.0499 -y 30 -k 12 \
+    -P 265000 -r 0.0499 -y 30 -k 12 \
     --first-date 2025-06-01
 ```
 
