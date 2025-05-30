@@ -55,7 +55,7 @@ $ loan_amort plot cumulative_line \
     --first-date 2025-06-01
 ```
 
-Shows how principal vs interest contributions accumulate over a 30‑year term.
+Shows how principal vs interest contributions accumulate over a a given term.
 
 ![Cumulative Chart](./UI/cumulative.png)
 
